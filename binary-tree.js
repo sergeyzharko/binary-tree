@@ -10,22 +10,19 @@ class BinaryTree {
             newNode = new Node(data);
 
 		if(!this.root){
-            this.root = newNode;
-            return;
+            this.root = newNode; return;
 		}
 
 		while(root){
             if(data < root.data){
                 if(!root.left){
-                    root.left = newNode;
-                    break;
+                    root.left = newNode; break;
                 }
                 else { root = root.left; }
             }
             else {
                 if(!root.right){
-                    root.right = newNode;
-                    break;
+                    root.right = newNode; break;
                 }
                 else { root = root.right; }
             }
@@ -73,12 +70,12 @@ class BinaryTree {
 			if (actual === this.root){
                 switch(childTotal){
                     case 0:
-                    this.root = null;
-                    break;
+                    this.root = null; break;
+					
                     case 1:
                     this.root = (actual.right === null ? 
-                                actual.left : actual.right);
-                    break;
+                                actual.left : actual.right); break;
+								
                     case 2:
                     change = this.root.left;
 
